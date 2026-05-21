@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Kit Digital</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+
+    <header class="cabecera">
+        <div class="logo">
+            <span>CRM</span> Kit Digital
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#funciones">Funciones</a>
+            <a href="#clientes">Clientes</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-texto">
+            <h1>Digitaliza la gestión de clientes de tu pyme</h1>
+
+            <p>
+                Sistema CRM diseñado para mejorar la organización, centralizar la información
+                y facilitar la transformación digital de pequeñas empresas.
+            </p>
+
+            <button onclick="mostrarMensaje()">Ver estado del sistema</button>
+
+            <p id="mensaje"></p>
+        </div>
+
+        <div class="hero-panel">
+            <h2>Panel CRM</h2>
+
+            <div class="dato">
+                <span>Clientes registrados</span>
+                <strong id="clientesRegistrados">24</strong>
+            </div>
+
+            <div class="dato">
+                <span>Servicios activos</span>
+                <strong>8</strong>
+            </div>
+
+            <div class="dato">
+                <span>Estado</span>
+                <strong class="verde">Activo</strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="funciones" class="seccion">
+        <h2>Funciones principales</h2>
+
+        <div class="tarjetas">
+            <div class="tarjeta">
+                <h3>Registrar clientes</h3>
+                <p>Permite guardar la información básica de cada cliente.</p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Buscar información</h3>
+                <p>Facilita la localización rápida de clientes por email.</p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Eliminar registros</h3>
+                <p>Permite borrar clientes cuando ya no sean necesarios.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="clientes" class="seccion gris">
+        <h2>Simulación de clientes</h2>
+
+        <form id="formularioCliente">
+            <input type="text" id="nombre" placeholder="Nombre del cliente">
+            <input type="email" id="email" placeholder="Email">
+            <input type="text" id="empresa" placeholder="Empresa">
+            <input type="text" id="telefono" placeholder="Telefono">
+            <input type="text" id="servicio" placeholder="Servicio interesado">
+
+            <button type="submit">Añadir cliente</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Empresa</th>
+                    <th>Telefono</th>
+                    <th>Servicio</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablaClientes">
+                <tr>
+                    <td>Luis</td>
+                    <td>luis@email.com</td>
+                    <td>Taller Luisja S.L.</td>
+                    <td>600123123</td>
+                    <td>CRM</td>
+                    <td><button class="botonEliminar" onclick="eliminarFila(this)">Eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="contacto" class="seccion">
+        <h2>Solución propuesta</h2>
+
+        <p class="texto-final">
+            Esta interfaz representa de forma visual el sistema CRM desarrollado en Java y MySQL.
+            Su objetivo es mostrar una solución digital moderna para la gestión de clientes dentro
+            del contexto del programa Kit Digital.
+        </p>
+    </section>
+
+    <footer>
+        <p>CRM Kit Digital - Proyecto de transformación digital</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
